@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)https://livestream.com/accounts/13907141/events/4117932/player?width=960&height=390&autoPlay=true&mute=true -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <meta name="googlebot-news" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            window.config = window.parent.config;
+        </script>
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="live_chat" src="./live_chat.js.descarga"></script><!--<base href="/">--><base href=".">
+        <link rel="P3Pv1" href="https://livestream.com/w3c/p3p.xml">
+    <link rel="stylesheet" type="text/css" href="./events.css"><script type="text/javascript" src="./require.js.descarga" data-main="//cdn.livestream.com/deploy/apps/production/events/5.2.37/javascripts/live_chat.js"></script></head>
+    <body class="ng-scope">
+        <div ng-controller="liveChatController" class="ng-scope">
+            <!-- ngIf: show_event --><div ng-if="show_event" data-live-chat="" class="ng-scope ng-isolate-scope"><div class="comment_container chat_container">
+    <div class="comment_header">
+        Chat <!-- ngIf: eventData.isViewerCountEnabled() -->
+        <a href="unsafe:javascript:void(0);" class="modal_close_icon grey_close dark_bg" ng-click="transferAction(&#39;sharedVar &gt; closeDrawer&#39;)"></a>
+        <div class="setting_icon_wrapper ng-hide" ng-show="isOwner &amp;&amp; !isEmbed">
+            <span class="common_icon setting_icon_dark ng-isolate-scope" toggle-dropdown="" data-toggle-element="js-chat_settings" modal-content="js-chat_settings" data-hide-on-popup-click="true">
+            </span>
+            <ul class="chat_settings js-chat_settings">
+                <li class="notification_text" ng-class="{&#39;active&#39; : !enableChat}" ng-click="toggleChatNotifications()">
+                </li>
+                <li class="blocked_user_text" ng-click="showManageBlockedAccountsModal()">
+                </li>
+            </ul>
+        </div>
+        <a href="unsafe:javascript:void(0);" ng-show="!isOwner || isEmbed" class="common_icon notification_icon active" data-description="Chat notifications" ng-class="{&#39;active&#39; : enableChat}" ng-click="toggleChatNotifications()"></a>
+    </div>
+    <!-- ngIf: !chatData.chatFlags.hasLoaded -->
+    <div class="empty_set ng-hide" ng-show="chatData.chatFlags.hasLoaded &amp;&amp; chatData.chatBlocks.length == 0">
+        <div class="common_icon no_comment_icon"></div>
+        <div class="no_data_heading">Let’s start the conversation!</div>
+    </div>
+    <div data-custom-scroll="" class="comment_body js-chat_message_wrapper ng-isolate-scope ss-container" ng-show="chatData.chatFlags.hasLoaded &amp;&amp; chatData.chatBlocks.length"><div class="ss-wrapper"><div class="ss-content">
+        <ul class="comments_list_wrapper">
+            <li class="comment_preload ng-hide" ng-show="chatData.remainingChatCount &gt; 0"><div class="material_preloader ng-isolate-scope">
+    <!-- ngIf: svgLoader --><svg width="20px" height="20px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" ng-if="svgLoader" class="ng-scope">
+      <g>
+        <animatetransform attributeName="transform" type="rotate" values="0 33 33;270 33 33" begin="0s" dur="1.4s" fill="freeze" repeatCount="indefinite"></animatetransform>
+        <circle fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" stroke-dasharray="187" stroke-dashoffset="610">
+          <animate attributeName="stroke" values="#ffffff" begin="0s" dur="5.6s" fill="freeze" repeatCount="indefinite"></animate>
+          <animatetransform attributeName="transform" type="rotate" values="0 33 33;135 33 33;450 33 33" begin="0s" dur="1.4s" fill="freeze" repeatCount="indefinite"></animatetransform>
+          <animate attributeName="stroke-dashoffset" values="187;46.75;187" begin="0s" dur="1.4s" fill="freeze" repeatCount="indefinite"></animate>
+        </circle>
+       </g>
+    </svg><!-- end ngIf: svgLoader -->
+    <!-- ngIf: !svgLoader -->
+    <div ng-transclude="" class="event_states"></div>
+</div></li>
+            <!-- ngRepeat: chatInfo in chatData.chatBlocks --><li class="comment ng-scope invalid_user" ng-repeat="chatInfo in chatData.chatBlocks" ng-class="{&#39;owner_viewing&#39; : isOwner, &#39;current_user_comment&#39; :
+            (currentUserId === chatInfo.authorId), &#39;event_owner_comment&#39; : eventData.owner.id === chatInfo.authorId, &#39;invalid_user&#39; : !validUser(chatInfo.authorId) }" ng-init="chatBoxScrolledUp ? &#39;&#39; : scrollCommentbox(); updateMessageStatus(chatInfo.pendingData)">
+                <!-- ngIf: chatInfo.joined -->
+                <!-- ngIf: !chatInfo.joined --><a rel="nofollow" class="commenter_avatar_wrapper ng-scope" ng-class="{&#39;common_icon dark_bg_following_icon&#39; : chatInfo.following}" target="_blank" ng-if="!chatInfo.joined">
+                    <!-- ngIf: chatInfo.avatar -->
+                    <!-- ngIf: !chatInfo.avatar --><p ng-if="!chatInfo.avatar" class="avatar_text ng-binding ng-scope" ng-style="{&#39;background&#39;: chatData.getAvatarColor(chatInfo.fullName.substr(0,1).toUpperCase())}" style="background: rgb(211, 63, 51);">O</p><!-- end ngIf: !chatInfo.avatar -->
+                </a><!-- end ngIf: !chatInfo.joined -->
+                <!-- ngIf: !chatInfo.joined --><div class="commenter_details ng-scope" ng-if="!chatInfo.joined">
+                    <div class="name_time_actions_wrapper" ng-class="{&#39;is_owner&#39; : (currentUserId == chatInfo.authorId)}">
+                        <div class="commenter_name_wrapper">
+                            <a class="commenter_name ng-binding" rel="nofollow" target="_blank">od</a>
+                            <span class="show_following_icon ng-hide" ng-show="chatInfo.following"></span>
+                        </div>
+                        <div class="time_ago_actions">
+                            <ul class="comment_actions_dropdown js-chat_message_actions_0">
+                                <!-- <li ng-if="currentUserId !== chatInfo.authorId && chatInfo.type !== 'GUEST'" ng-click="followAccount(chatInfo)"
+                                ng-class="{'following' : chatInfo.following}" class="follow_commenter">
+                                </li> -->
+                                <!-- For owner -->
+                                <!-- ngIf: isOwner || (currentUserId === chatInfo.authorId && chatInfo.type !== 'GUEST') -->
+                                <!-- For viewer as guest -->
+                                <!-- ngIf: guestAccountID === chatInfo.authorId && chatInfo.type === 'GUEST' -->
+                                <!-- ngIf: isOwner && currentUserId !== chatInfo.authorId && chatInfo.type !== 'GUEST' -->
+                                <!-- ngIf: isOwner && currentUserId !== chatInfo.authorId && chatInfo.type === 'GUEST' -->
+                            </ul>
+                            <span class="comment_time_ago ng-binding">20 h</span>
+                            <span class="comment_actions common_icon more_menu_icon ng-isolate-scope" data-toggle-dropdown="" data-toggle-element="js-chat_message_actions_0" data-hide-on-popup-click="true" data-invert-position="true" data-container-element="js-chat_message_wrapper">
+                            </span>
+                        </div>
+                        <div class="follow_time_ago_wrapper" style="display: none">
+                            <!-- ngIf: currentUserId !== chatInfo.authorId && chatInfo.type !== 'GUEST' -->
+                            <!-- ngIf: isOwner && currentUserId !== chatInfo.authorId && chatInfo.type !== 'GUEST' -->
+                            <!-- ngIf: isOwner || (currentUserId === chatInfo.authorId) -->
+                            <!-- ngIf: isOwner && currentUserId !== chatInfo.authorId && chatInfo.type === 'GUEST' -->
+                        </div>
+                    </div>
+                    <div class="commenter_content ng-binding" data-id="">
+                        ;)
+                    </div>
+                    <div class="comment_status ng-hide" ng-show="chatInfo.status === &#39;pending&#39;">
+                        Posting...
+                    </div>
+                    <div class="comment_status ng-hide" ng-show="chatInfo.status === &#39;failed&#39;">
+                        Failed to post. <span ng-click="retryPosting(chatInfo.pendingData)">Retry</span>
+                    </div>
+                </div><!-- end ngIf: !chatInfo.joined -->
+            </li><!-- end ngRepeat: chatInfo in chatData.chatBlocks -->
+        </ul>
+    </div></div><div class="ss-scroll"></div></div>
+    <div class="show_latest_message" ng-click="scrollCommentbox(false)" ng-class="{ &#39;show_new_comments&#39; : chatBoxScrolledUp &amp;&amp; chatData.newUnreadMessage}">NEW COMMENTS</div>
+    <div class="chat_textarea_wrapper textarea_position">
+        <!-- ngIf: chatData.chatFlags.isActive --><div ng-if="chatData.chatFlags.isActive" ng-switch="chatInputState" class="ng-scope">
+            <!-- ngSwitchWhen: join -->
+            <!-- ngSwitchWhen: name --><div class="start_guest_commenting  ng-scope" ng-switch-when="name">
+                <textarea class="js-commentBox ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-maxlength" rows="1" auto-size="" resize-callback="resizedCommentBox(height)" data-default-height="38px" placeholder="Your Name" name="authorFullName" ng-model="authorFullName" ng-trim="true" maxlength="30" ng-keydown="$event.keyCode == 13 ? enterGuestName(authorFullName, $event) : null" ng-class="{&#39;set_height_on_firefox&#39; : isFirefoxOnWindows,&#39;error_box&#39; : showErrorWarning,&#39;show_character_left&#39; : authorFullName.length &gt; 17}" autofocus="" style="overflow: hidden visible; overflow-wrap: break-word;"></textarea>
+                <span class="characters_left ng-binding ng-hide" ng-show="showErrorWarning" ng-bind="errorMessage"></span>
+                <div class="button grey_button" ng-click="enterGuestName(authorFullName)">JOIN</div>
+                <span class="characters_left js-character_count ng-binding ng-hide" ng-show="showCharactersLeft(authorFullName)">
+                    30 characters left
+                </span>
+                <input type="text" class="comment_address ng-pristine ng-untouched ng-valid ng-not-empty" name="my_nectar" placeholder="Address" ng-model="chat[nectar_key]">
+            </div><!-- end ngSwitchWhen: -->
+            <!-- ngSwitchWhen: message -->
+            <!-- ngSwitchWhen: transition -->
+        </div><!-- end ngIf: chatData.chatFlags.isActive -->
+
+
+        <!-- ngIf: !chatData.chatFlags.isActive -->
+    </div>
+    <span class="characters_left js-character_count ng-binding ng-hide" ng-show="chat.chatMessage.length &gt; 179">
+        200 characters left
+    </span>
+    <!-- ngIf: throttleChat -->
+</div>
+</div><!-- end ngIf: show_event -->
+        </div>
+        <script type="text/javascript">
+            window.cookieFunctions = window.parent.cookieFunctions;
+
+            var chat_app_js = window.config.angular_chat_app_js;
+
+            var getScriptNode = function (src) {
+                var script = document.createElement( 'script' );
+                script.type = 'text/javascript';
+                script.src = src;
+                return script;
+            };
+
+            var loadRequireScript = function () {
+                var require_script = getScriptNode(chat_app_js.require_source);
+                var att = document.createAttribute("data-main");
+                att.value = chat_app_js.require_main;
+                require_script.setAttributeNode(att);
+                document.head.appendChild(require_script);
+            }
+
+
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.config.angular_chat_app_css;
+            document.head.appendChild(link);
+
+            var config_script;
+            if (chat_app_js && chat_app_js.require_config) {
+                config_script = getScriptNode(chat_app_js.require_config);
+                document.head.appendChild(config_script);
+            }
+            if (chat_app_js && chat_app_js.require_source && chat_app_js.require_main) {
+                if (config_script) {
+                    config_script.addEventListener('load', function (e) {
+                        loadRequireScript();
+                    }, false);
+                } else {
+                    loadRequireScript();
+                }
+            }
+        </script>
+    
+
+
+</body></html>
